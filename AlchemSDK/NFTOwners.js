@@ -22,6 +22,4 @@ alchemy.nft.getNftsForOwner("vitalik.eth", {
 }).then(console.log)
 
 //Get all outbound transfers to a provided address
-alchemy.core.getTokenBalances('0x994b342dd87fc825f66e51ffa3ef71ad818b6893').then(
-    console.log
-  );
+alchemy.core.getTokenBalances('0x994b342dd87fc825f66e51ffa3ef71ad818b6893').then(console.log);

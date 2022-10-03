@@ -11,8 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "alchemy-sdk": "^2.1.0"
-  },
-  "devDependencies": {
-    "@babel/helper-compilation-targets": "^7.19.3"
   }
 }

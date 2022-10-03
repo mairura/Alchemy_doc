@@ -1,8 +1,12 @@
 const { Network, Alchemy } = require("alchemy-sdk");
 const { parseEther } = require("alchemy-sdk/dist/src/api/utils");
+const dotenv = require("dotenv");
+dotenv.config();
+
+const api_key = process.env.API_KEY
 
 const setting = {
-    apiKey: "qeBwYXWjH0zS3TGoq7qv6IBwHn3Dm9X4",
+    apiKey: api_key,
     network: Network.ETH_GOERLI,
 };
 
@@ -10,7 +14,7 @@ const alchemy = new Alchemy(setting);
 
 async function main() {
     const latestBlock = await alchemy.core.getBlockNumber();
-    console.log("The latest block number is", latestBlock)
+    console.log("The latest block number is", latestBlock);
 }
 
 

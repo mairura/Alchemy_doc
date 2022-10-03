@@ -3,11 +3,11 @@ const { Alchemy } = require("alchemy-sdk")
 const alchemy = new Alchemy();
 
 //Listening to all pending transactions
-// alchemy.ws.on({
-//     method: "alchemy_pendingTransactions"
-//  },
-//  res => console.log(res) 
-// );
+alchemy.ws.on({
+    method: "alchemy_pendingTransactions"
+ },
+ res => console.log(res) 
+);
 
 //Listen to only the next transaction on the USDC contract
 alchemy.ws.once({
@@ -18,4 +18,4 @@ alchemy.ws.once({
 )
 
 //Remove all listeners
-// alchemy.ws.removeAllListeners();
+alchemy.ws.removeAllListeners();
